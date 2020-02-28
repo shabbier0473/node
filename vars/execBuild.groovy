@@ -10,7 +10,7 @@ def call(String command) {
 					tools { maven "MAVEN_HOME"}
 					steps 
 					{
-						sh 'mvn --version'
+						sh 'mvn install'
 					}
 				}	
 			}
