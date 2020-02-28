@@ -7,9 +7,10 @@ def call(String command) {
 			{
 				stage("Build") 
 				{
+					tools { maven "MAVEN_HOME"}
 					steps 
 					{
-						echo "Build is executed"
+						sh 'mvn --version'
 					}
 				}	
 			}
