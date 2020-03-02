@@ -10,6 +10,11 @@ def call(String command) {
                 sh "mvn test"
             }
         }
+        stage("sonar")
+           tools{ maven "MAVEN_HOME"}
+           steps{
+               sh "mvn sonar:sonar"
+           }
     }
 }
 }
