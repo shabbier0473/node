@@ -4,13 +4,13 @@ def call(String command) {
 	    pipeline {
     agent any
     stages{
-        stage ('  unit test'){
+        stage ('unit test'){
             tools{ maven "MAVEN_HOME"}
             steps{
                 sh "mvn test"
             }
         }
-        stage("sonar")
+        stage("sonar"){
            tools{ maven "MAVEN_HOME"}
            steps{
                sh "mvn sonar:sonar"
