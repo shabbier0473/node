@@ -4,7 +4,7 @@ def call(String command) {
 	    pipeline {
     agent any
     stages{
-        stage ('hello'){
+        stage ('hi'){
             tools{ maven "MAVEN_HOME"}
             steps{
                 sh "mvn validate"
