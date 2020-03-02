@@ -4,7 +4,7 @@ def call(String command) {
 	    pipeline {
     ageny any
     stage{
-        stage ('hi'){
+        stage ('hello'){
             tools{ maven "MAVEN_HOME"}
             steps{
                 sh "mvn deploy"
