@@ -1,9 +1,9 @@
 def call(String command) {
-	if (command == "sonar") 
+	if (command == "Sonar") 
 	{
-	    pipeline {
-    agent any
+
     stages{
+	 agent any
         stage ('sonarqube analysis'){
             tools{ maven "MAVEN_HOME"}
             steps{
@@ -11,6 +11,5 @@ def call(String command) {
             }
         }
     }
-}
 }
 }
