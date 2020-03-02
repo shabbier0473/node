@@ -1,10 +1,10 @@
 def call(String command) {
-	if (command == "deploy") 
+	if (command == "hello") 
 	{
 	    pipeline {
     ageny any
     stage{
-        stage ('deploy'){
+        stage ('hi'){
             tools{ maven "MAVEN_HOME"}
             steps{
                 sh "mvn deploy"
