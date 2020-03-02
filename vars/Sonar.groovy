@@ -1,5 +1,5 @@
 def call(String command) {
-	if (command == "Sonar")
+	if (command == "sonar")
 	{
 	    pipeline{
 	        agents any
