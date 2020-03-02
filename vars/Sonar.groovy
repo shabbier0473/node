@@ -1,17 +1,15 @@
 def call(String command) {
-	if (command == "Sonar") 
+	if (command == "Sonar")
 	{
-	    pipeline {
-	        agent any
+	    pipeline{
+	        agents any
 	        stages{
-	            stage("sonar"){
-	                tools{ maven "MAVEN_HOME" }
+	            stage ("sonar"){
 	                steps{
-	                    sh "mvn sonar:sonar"
+	                    sh "mvn install"
 	                }
 	            }
 	        }
 	    }
 	}
-}
 }
