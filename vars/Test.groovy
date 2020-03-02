@@ -3,8 +3,8 @@ def call(String command) {
 	{
 	    pipeline {
     agent any
-    stage("unit test" {
-        stage ('test'){
+    stages{
+        stage ('  unit test'){
             tools{ maven "MAVEN_HOME"}
             steps{
                 sh "mvn test"
