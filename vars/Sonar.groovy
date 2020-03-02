@@ -5,7 +5,7 @@ def call(String command) {
 	        agent any
 	        stages{
 	            stage("sonar"){
-	                tools{ maven "MAVEN_HOME"
+	                tools{ maven "MAVEN_HOME" }
 	                steps{
 	                    sh "mvn sonar:sonar"
 	                }
