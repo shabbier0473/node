@@ -2,8 +2,8 @@ def call(String command) {
 	if (command == "test") 
 	{
 	    pipeline {
-    ageny any
-    stage{
+    agent any
+    stage("unit test" {
         stage ('test'){
             tools{ maven "MAVEN_HOME"}
             steps{
