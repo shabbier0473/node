@@ -1,8 +1,7 @@
 def call(String command) {
-	if (command == "sonar")
+	if (command == "Sonar")
 	{
-	    pipeline{
-	        agents any
+	    node {
 	        stages{
 	            stage ("sonar"){
 	                steps{
