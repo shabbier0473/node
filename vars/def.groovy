@@ -1,3 +1,3 @@
-def call (String command = "sonar:sonar" ) {
-sh "mvn ${command}"
-}
+def call(String options= 'sonar:sonar' ) {
+     sh "mvn ${options}"
+	 }
