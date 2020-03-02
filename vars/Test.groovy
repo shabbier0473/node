@@ -15,6 +15,7 @@ def call(String command) {
            steps{
                sh "mvn sonar:sonar"
            }
+	}
     }
 }
 }
