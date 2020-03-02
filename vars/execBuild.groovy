@@ -24,9 +24,10 @@ def call(String command) {
 			{
 				stage("Deploy") 
 				{
+					tools { maven "MAVEN_HOME"}
 					steps 
 					{
-						echo "Deploy is executed"
+						sh "mvn deploy"
 					}
 				}	
 			}
