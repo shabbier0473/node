@@ -1,11 +1,11 @@
 def call(String command) {
-	if (command == "compile") 
-	{
-	 pipeline{
+               if(command=="compile")
+               {
+               pipeline{
     agent{
         node{
         label 'maven'
-        customWorkspace '/home/maven/workspace/time-tracker'
+        customWorkspace '/home/maven/workspace/stime=tracker'
         }
     }
     stages{
