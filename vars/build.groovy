@@ -3,7 +3,6 @@ def call(String command) {
                {
         node{
         label 'maven'
-        ws '/home/maven/workspace/project'
         }
     }
     stages{
