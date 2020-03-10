@@ -5,7 +5,7 @@ def call(String command) {
     agent{
         node{
         label 'maven'
-        customWorkspace /home/maven/workspace/time-tracker
+        customWorkspace '/home/maven/workspace/time-tracker'
         }
     }
     stages{
