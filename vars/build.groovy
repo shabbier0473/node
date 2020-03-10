@@ -1,7 +1,6 @@
 def call(String command) {
 	if (command == "hello") 
 	{
-	    pipeline {
     agent any
     stages{
         stage ('hi'){
@@ -11,6 +10,5 @@ def call(String command) {
             }
         }
     }
-}
 }
 }
