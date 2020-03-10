@@ -1,7 +1,6 @@
 def call(String command) {
                if(command=="hello")
                {
-               pipeline{
     agent{
         node{
         label 'maven'
@@ -20,4 +19,4 @@ def call(String command) {
     }
 }
 }
-}
+
