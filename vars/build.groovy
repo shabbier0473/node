@@ -1,10 +1,6 @@
 def call(String command) {
                if(command=="hello")
                {
-        node{
-        label 'maven'
-        }
-    }
     stages{
         stage ('compile'){
             tools{
@@ -16,5 +12,5 @@ def call(String command) {
         }
     }
 }
-
+}
 
