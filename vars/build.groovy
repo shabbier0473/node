@@ -1,8 +1,23 @@
 def call(String command) {
-	if (command == "hello") 
-	{
-   node{
-    sh 'mvn compile'
-   }
+               if(command=="hello")
+               {
+               pipeline{
+    agent{
+        node{
+        label 'maven'
+        customWorkspace '/home/maven/workspace/project'
+        }
+    }
+    stages{
+        stage ('compile'){
+            tools{
+                maven 'MAVEN_HOME'
+            }
+            steps{
+                sh 'mvn compile'
+            }
+        }
+    }
+}
 }
 }
