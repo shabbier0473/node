@@ -8,13 +8,9 @@ if (command == "scm")
         gitParameter name: 'TAG',type: 'PT_TAG', selectedValue: 'NONE'
     }
     stages{
-        stage ('validate') {
-            tools{ maven 'MAVEN_HOME' }
-            when { 
-                expression {BRANCH == 'devlop'  }
-            }
+        stage ('scm') {
             steps{
-                sh 'mvn validate'
+                git branch: 'devlop', credentialsId: 'git', url: 'https://github.com/shabbier0473/time-tracker.git'
             }
         }
     }
