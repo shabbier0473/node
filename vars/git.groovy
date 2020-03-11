@@ -1,16 +1,12 @@
 def call(String command) {
 if (command == "scm") 
  {
-     pipeline{
-    agent{ label  'maven' } 
-    parameters{
-        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'origin/devlop', name: 'BRANCH', type: 'PT_BRANCH'
-        gitParameter name: 'TAG',type: 'PT_TAG', selectedValue: 'NONE'
-    }
-    stages{
-        stage ('scm') {
-            steps{
-                git branch: 'devlop', credentialsId: 'git', url: 'https://github.com/shabbier0473/time-tracker.git'
+    pipeline {
+    agent any
+    stages {
+        stage('SCM') {
+            steps {
+                git url: 'https://github.com/shabbier0473/time-tracker.git'
             }
         }
     }
