@@ -1,9 +1,9 @@
 def call(String command) {
-if (command == "build") 
+if (command == "compile") 
  {
 node{
-    stage('build'){
-        ws ('/home/maven/workspace/project'){
+    stage('compile'){
+        ws ('/home/maven/workspace/shabbir'){
             def mavenHome = tool name : 'MAVEN_HOME' ,type: 'maven'
             sh "${mavenHome}/bin/mvn compile"
         }
