@@ -1,3 +1,6 @@
+def call(String command) {
+if (command == "build") 
+ {
 node{
     stage('build'){
         ws ('/home/maven/workspace/project'){
@@ -6,4 +9,6 @@ node{
         }
         
     }
+}
+}
 }
