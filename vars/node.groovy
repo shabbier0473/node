@@ -1,15 +1,19 @@
-def call(String command) {
-	if (command == "test") 
-	{
-    pipeline{
-        agent any
-        stages{
-            stage("hello"){
-                steps{
-                   sh "echo 'shabbir' "
-                }
-            }
-        }
-    }
-}
+def call(String command) {						
+	if (command == "build") 					
+	{					
+		pipeline {				
+			agent any			
+			stages 			
+			{			
+				stage("Build") 		
+				{		
+					tools { maven "MAVEN_HOME"}	
+					steps 	
+					{	
+						echo "shabbier"
+					}	
+				}		
+			}			
+		}				
+	}
 }
