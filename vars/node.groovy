@@ -6,7 +6,7 @@ def call(String command) {
         stages{
             stage("hello"){
                 steps{
-                    echo "hello"
+                   sh "echo 'shabbir' "
                 }
             }
         }
