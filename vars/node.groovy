@@ -1,9 +1,14 @@
 def call(String command) {
 	if (command == "test") 
 	{
-    node{
-        stage ('hello'){
-            echo "hello test"
+    pipeline{
+        agent any
+        stages{
+            stage("hello"){
+                steps{
+                    echo "hello"
+                }
+            }
         }
     }
 }
